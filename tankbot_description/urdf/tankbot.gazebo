@@ -91,10 +91,10 @@
     <updateRate>100</updateRate>
 
     <!-- Name of left joint, defaults to `left_joint` -->
-    <leftJoint>lw1_joint</leftJoint>
+    <leftJoint>lw2_joint</leftJoint>
 
     <!-- Name of right joint, defaults to `right_joint` -->
-    <rightJoint>rw1_joint</rightJoint>
+    <rightJoint>rw2_joint</rightJoint>
 
     <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
     <wheelSeparation>0.2</wheelSeparation>
