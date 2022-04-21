@@ -6,19 +6,19 @@
 <xacro:include filename="$(find tankbot_description)/urdf/tankbot.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.04802449670948884 -0.2570000000000001 0.03092345572753796"/>
+    <origin xyz="0.04802449670948884 -0.2570000000000001 0.03092345572753796" rpy="0 0 0"/>
     <mass value="9.663393854812522"/>
-    <inertia ixx="0.050312" ixy="-0.0" ixz="-1.3e-05" iyy="0.087124" iyz="-0.0" izz="0.121613"/>
+    <inertia ixx="0.050312" iyy="0.087124" izz="0.121613" ixy="-0.0" iyz="-0.0" ixz="-1.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -27,19 +27,19 @@
 
 <link name="rw3_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-5.551115123125783e-17 -0.015000000000000069 -4.163336342344337e-17"/>
-    <mass value="1.8496126748009902"/>
-    <inertia ixx="0.001295" ixy="0.0" ixz="0.0" iyy="0.002312" iyz="0.0" izz="0.001295"/>
+    <origin xyz="-2.7755575615628914e-17 -0.015000000000000069 -2.0816681711721685e-17" rpy="0 0 0"/>
+    <mass value="1.6692754390078943"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.055 0.3635 -0.035"/>
+    <origin xyz="0.055 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw3_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.055 0.3635 -0.035"/>
+    <origin xyz="0.055 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw3_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -48,19 +48,19 @@
 
 <link name="rw2_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-9.020562075079397e-17 -0.015000000000000513 -1.3877787807814457e-17"/>
-    <mass value="1.183752111872634"/>
-    <inertia ixx="0.000562" ixy="-0.0" ixz="-0.0" iyy="0.000947" iyz="-0.0" izz="0.000562"/>
+    <origin xyz="2.7755575615628914e-17 -0.015000000000000513 9.020562075079397e-17" rpy="0 0 0"/>
+    <mass value="1.669275439007894"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.0475 0.3635 -0.035"/>
+    <origin xyz="-0.0475 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw2_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.0475 0.3635 -0.035"/>
+    <origin xyz="-0.0475 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw2_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -69,19 +69,19 @@
 
 <link name="rw1_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-1.1102230246251565e-16 -0.015000000000000013 2.0816681711721685e-17"/>
-    <mass value="1.8496126748009902"/>
-    <inertia ixx="0.001295" ixy="0.0" ixz="0.0" iyy="0.002312" iyz="-0.0" izz="0.001295"/>
+    <origin xyz="-1.1102230246251565e-16 -0.015000000000000013 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="1.6692754390078939"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.15 0.3635 -0.035"/>
+    <origin xyz="-0.15 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw1_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.15 0.3635 -0.035"/>
+    <origin xyz="-0.15 0.3635 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/rw1_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -90,19 +90,19 @@
 
 <link name="lw1_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="5.551115123125783e-17 0.014999999999999875 1.3877787807814457e-17"/>
-    <mass value="1.8496126748009907"/>
-    <inertia ixx="0.001295" ixy="0.0" ixz="-0.0" iyy="0.002312" iyz="0.0" izz="0.001295"/>
+    <origin xyz="1.1102230246251565e-16 0.014999999999999902 3.469446951953614e-17" rpy="0 0 0"/>
+    <mass value="1.6692754390078937"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.1505 0.1505 -0.035"/>
+    <origin xyz="-0.1505 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw1_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.1505 0.1505 -0.035"/>
+    <origin xyz="-0.1505 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw1_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -111,19 +111,19 @@
 
 <link name="lw2_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="2.0816681711721685e-17 0.014999999999999875 -1.3877787807814457e-17"/>
-    <mass value="1.183752111872634"/>
-    <inertia ixx="0.000562" ixy="0.0" ixz="-0.0" iyy="0.000947" iyz="0.0" izz="0.000562"/>
+    <origin xyz="6.245004513516506e-17 0.014999999999999875 2.7755575615628914e-17" rpy="0 0 0"/>
+    <mass value="1.6692754390078937"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.048 0.1505 -0.035"/>
+    <origin xyz="-0.048 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw2_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.048 0.1505 -0.035"/>
+    <origin xyz="-0.048 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw2_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -132,19 +132,19 @@
 
 <link name="lw3_link_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="9.020562075079397e-17 0.014999999999999958 0.0"/>
-    <mass value="1.8496126748009907"/>
-    <inertia ixx="0.001295" ixy="-0.0" ixz="0.0" iyy="0.002312" iyz="0.0" izz="0.001295"/>
+    <origin xyz="9.71445146547012e-17 0.01499999999999993 2.7755575615628914e-17" rpy="0 0 0"/>
+    <mass value="1.6692754390078937"/>
+    <inertia ixx="0.001067" iyy="0.001883" izz="0.001067" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="0.0545 0.1505 -0.035"/>
+    <origin xyz="0.0545 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw3_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="0.0545 0.1505 -0.035"/>
+    <origin xyz="0.0545 0.1505 -0.035" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lw3_link_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -153,19 +153,19 @@
 
 <link name="frame_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="1.1856979425378666e-07 -1.1102230246251565e-16 0.1270000000000003"/>
+    <origin xyz="1.1856979425378666e-07 -1.1102230246251565e-16 0.1270000000000003" rpy="0 0 0"/>
     <mass value="4.173751809755388"/>
-    <inertia ixx="0.053156" ixy="0.0" ixz="0.0" iyy="0.059602" iyz="0.0" izz="0.047225"/>
+    <inertia ixx="0.053156" iyy="0.059602" izz="0.047225" ixy="0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.048432 0.2575 -0.09"/>
+    <origin xyz="-0.048432 0.2575 -0.09" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/frame_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.048432 0.2575 -0.09"/>
+    <origin xyz="-0.048432 0.2575 -0.09" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/frame_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -174,19 +174,19 @@
 
 <link name="holder_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.015898641976588364 -0.0001410013794365672 0.03722253654962837"/>
+    <origin xyz="-0.015898641976588364 -0.0001410013794365672 0.03722253654962837" rpy="0 0 0"/>
     <mass value="2.1421450013668144"/>
-    <inertia ixx="0.010373" ixy="1.1e-05" ixz="6.3e-05" iyy="0.004839" iyz="-5e-06" izz="0.011427"/>
+    <inertia ixx="0.010373" iyy="0.004839" izz="0.011427" ixy="1.1e-05" iyz="-5e-06" ixz="6.3e-05"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.048432 0.2575 -0.344"/>
+    <origin xyz="-0.048432 0.2575 -0.344" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/holder_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.048432 0.2575 -0.344"/>
+    <origin xyz="-0.048432 0.2575 -0.344" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/holder_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -195,19 +195,19 @@
 
 <link name="camera_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="0.005000020162195945 1.3403930410049725e-07 1.1102230246251565e-16"/>
+    <origin xyz="0.005000020162195945 1.3403930410049725e-07 1.1102230246251565e-16" rpy="0 0 0"/>
     <mass value="0.15204665638341558"/>
-    <inertia ixx="0.000106" ixy="-0.0" ixz="-0.0" iyy="7e-06" iyz="0.0" izz="0.000102"/>
+    <inertia ixx="0.000106" iyy="7e-06" izz="0.000102" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.072341 0.260428 -0.367"/>
+    <origin xyz="-0.072341 0.260428 -0.367" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.072341 0.260428 -0.367"/>
+    <origin xyz="-0.072341 0.260428 -0.367" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -216,19 +216,19 @@
 
 <link name="lidar_1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-4.29900122521365e-07 -2.5480986765025193e-09 0.019135896206633696"/>
+    <origin xyz="-4.29900122521365e-07 -2.5480986765025193e-09 0.019135896206633696" rpy="0 0 0"/>
     <mass value="1.898390048800237"/>
-    <inertia ixx="0.001161" ixy="0.0" ixz="-0.0" iyy="0.001161" iyz="-0.0" izz="0.001848"/>
+    <inertia ixx="0.001161" iyy="0.001161" izz="0.001848" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin rpy="0 0 0" xyz="-0.048387 0.2575 -0.42"/>
+    <origin xyz="-0.048387 0.2575 -0.42" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.048387 0.2575 -0.42"/>
+    <origin xyz="-0.048387 0.2575 -0.42" rpy="0 0 0"/>
     <geometry>
       <mesh filename="package://tankbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -236,67 +236,67 @@
 </link>
 
 <joint name="rw3_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.055 -0.3635 0.035"/>
+  <origin xyz="-0.055 -0.3635 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="rw3_link_1"/>
-  <axis xyz="-0.0 -1.0 0.0"/>
+  <axis xyz="-0.0 1.0 0.0"/>
 </joint>
 
 <joint name="rw2_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0475 -0.3635 0.035"/>
+  <origin xyz="0.0475 -0.3635 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="rw2_link_1"/>
-  <axis xyz="-0.0 -1.0 0.0"/>
+  <axis xyz="-0.0 1.0 0.0"/>
 </joint>
 
 <joint name="rw1_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="0.15 -0.3635 0.035"/>
+  <origin xyz="0.15 -0.3635 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="rw1_link_1"/>
   <axis xyz="-0.0 1.0 0.0"/>
 </joint>
 
 <joint name="lw1_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="0.1505 -0.1505 0.035"/>
+  <origin xyz="0.1505 -0.1505 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="lw1_link_1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="lw2_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="0.048 -0.1505 0.035"/>
+  <origin xyz="0.048 -0.1505 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="lw2_link_1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="lw3_joint" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.0545 -0.1505 0.035"/>
+  <origin xyz="-0.0545 -0.1505 0.035" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="lw3_link_1"/>
   <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
 <joint name="frame_joint" type="fixed">
-  <origin rpy="0 0 0" xyz="0.048432 -0.2575 0.09"/>
+  <origin xyz="0.048432 -0.2575 0.09" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="frame_1"/>
 </joint>
 
 <joint name="holder_joint" type="fixed">
-  <origin rpy="0 0 0" xyz="0.0 0.0 0.254"/>
+  <origin xyz="0.0 0.0 0.254" rpy="0 0 0"/>
   <parent link="frame_1"/>
   <child link="holder_1"/>
 </joint>
 
 <joint name="camera_joint" type="fixed">
-  <origin rpy="0 0 0" xyz="0.023909 -0.002928 0.023"/>
+  <origin xyz="0.023909 -0.002928 0.023" rpy="0 0 0"/>
   <parent link="holder_1"/>
   <child link="camera_1"/>
 </joint>
 
 <joint name="lidar_joint" type="fixed">
-  <origin rpy="0 0 0" xyz="-4.5e-05 0.0 0.076"/>
+  <origin xyz="-4.5e-05 0.0 0.076" rpy="0 0 0"/>
   <parent link="holder_1"/>
   <child link="lidar_1"/>
 </joint>
