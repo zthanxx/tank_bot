@@ -2,7 +2,7 @@
 <robot name="tankbot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
-
+<xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
 <gazebo>
   <plugin filename="libgazebo_ros_control.so" name="control"/>
 </gazebo>
@@ -83,6 +83,7 @@
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
+
 <gazebo>
   <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
 
@@ -90,10 +91,10 @@
     <updateRate>100</updateRate>
 
     <!-- Name of left joint, defaults to `left_joint` -->
-    <leftJoint>lw1_link_1</leftJoint>
+    <leftJoint>lw1_joint</leftJoint>
 
     <!-- Name of right joint, defaults to `right_joint` -->
-    <rightJoint>rw1_link_1</rightJoint>
+    <rightJoint>rw1_joint</rightJoint>
 
     <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
     <wheelSeparation>0.2</wheelSeparation>
@@ -126,7 +127,7 @@
     <publishWheelTF>false</publishWheelTF>
 
     <!-- Set to true to publish transforms for the odometry, defaults to true -->
-    <publishOdom>true</publishOdom>
+    <publishOdom>false</publishOdom>
 
     <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
     <publishWheelJointState>false</publishWheelJointState>
