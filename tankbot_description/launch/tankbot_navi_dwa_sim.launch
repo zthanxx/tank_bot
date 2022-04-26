@@ -1,0 +1,34 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="use_sim_time" value="true"/>
+  <arg name="map_file" default="$(find tankbot_description)/maps/sampleroom.yaml"/>
+  <arg name="open_rviz" default="true"/>
+
+  <!-- gazebo -->
+ <include file="$(find tankbot_description)/launch/gazebo.launch">
+  
+  </include>
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 map odom 100" /> -->
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL -->
+  <include file="$(find tankbot_description)/dwa/amcl.launch"/>
+
+  <!-- move_base -->
+  <include file="$(find tankbot_description)/dwa/move_base.launch">
+  </include>
+
+  <!-- rviz -->
+ <arg default="$(find tankbot_description)/urdf/tankbot.xacro" name="model"/>
+  <arg default="true" name="gui"/>
+  <arg default="$(find steer_wheel_bot_rviz)/rviz/urdf.rviz" name="rvizconfig"/>
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/> -->
+	  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tankbot_description)/dwa/dwa_rviz.rviz"/>
+
+</launch>
