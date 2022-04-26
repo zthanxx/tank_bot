@@ -7,19 +7,19 @@
     <node pkg="move_base" type="move_base" name="move_base" 
         respawn="false" output="screen">
         <rosparam
-            file="$(find steer_wheel_bot_navigation)/dwa/costmap_common.yaml"
+            file="$(find tankbot_description)/dwa/costmap_common.yaml"
             command="load" ns="global_costmap" />
         <rosparam
-            file="$(find steer_wheel_bot_navigation)/dwa/costmap_common.yaml"
+            file="$(find tankbot_description)/dwa/costmap_common.yaml"
             command="load" ns="local_costmap" />
         <rosparam
-            file="$(find steer_wheel_bot_navigation)/dwa/costmap_global_no_map.yaml"
+            file="$(find tankbot_description)/dwa/costmap_global_no_map.yaml"
             command="load" />
         <rosparam
-            file="$(ffind steer_wheel_bot_navigation)/dwa/costmap_local.yaml"
+            file="$(ffind tankbot_description)/dwa/costmap_local.yaml"
             command="load" />
         <rosparam
-            file="$(find steer_wheel_bot_navigation)/dwa/planner_local.yaml"
+            file="$(find tankbot_description)/dwa/planner_local.yaml"
             command="load" />
     </node>
 
