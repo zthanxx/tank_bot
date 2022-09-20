@@ -1,0 +1,10 @@
+ 
+ <launch>
+  <node pkg="tf" type="static_transform_publisher" name="pose_link_to_base"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100" />
+<node pkg="tf" type="static_transform_publisher" name="lidar_link_to_laser"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 lidar_1 laser_frame 100" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_to_realsense"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 odom  camera_1 camera_link 100" />
+
+ </launch>

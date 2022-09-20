@@ -1,0 +1,37 @@
+<launch>
+  <!-- TF -->
+<node pkg="tf" type="static_transform_publisher" name="odom_link_to_pose"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 odom camera_odom_frame 100" />
+ <node pkg="tf" type="static_transform_publisher" name="pose_link_to_base"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100" />
+<node pkg="tf" type="static_transform_publisher" name="lidar_link_to_laser"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 lidar_1 laser_frame 100" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_to_realsense"
+    args="0.0 0.0 0.0 0.0 0.0 0.0  camera_1 camera_link 100" />
+
+
+  <!-- Gmapping -->
+<!-- <node pkg="gmapping" type="slam_gmapping" name="gmapping_thing" output="screen" > -->
+  <!-- <remap from="scan" to="youbot/scan_front" />
+  <param name="odom_frame" value="odom" />
+  <param name="base_frame" value="base_link" /> -->
+<!-- </node> -->
+
+
+<!-- Rviz -->
+
+  <arg default="$(find tankbot_description)/urdf/tankbot.xacro" name="model"/>
+  <arg default="true" name="gui"/>
+  <arg default="$(find tankbot_description)/launch/urdf.rviz" name="rvizconfig"/>
+  <param command="$(find xacro)/xacro $(arg model)" name="robot_description"/>
+  <param name="use_gui" value="$(arg gui)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <node args="-d $(arg rvizconfig)" name="rviz" pkg="rviz" required="true" type="rviz"/>
+</launch>
+
+
+
+
+
+<!-- rosrun map_server map_saver -f ~/map -->

@@ -1,0 +1,12 @@
+https://github.com/XRobots/Navigation-Unit
+
+rosrun tf static_transform_publisher 0.0 0.0 0.0 0.0 0.0 0.0 camera_1 camera_link 100
+rosrun tf static_transform_publisher 0.0 0.0 0.0 0.0 0.0 0.0 odom camera_odom_frame 100
+
+rosrun tf static_transform_publisher 0.0 0.0 0.0 0.0 0.0 0.0 camera_pose_frame base_link 100
+
+rosrun tf static_transform_publisher 0.0 0.0 0.0 0.0 0.0 0.0 lidar_1 laser_frame 100
+
+rosrun gmapping slam_gmapping scan:=scan
+rosrun map_server map_saver -f ~/map
+
